@@ -9,8 +9,10 @@ dependencies:
   - pytorch-cuda=11.7
   - pip
   - pip:
-    - diffusers==0.27.0
-    - transformers==4.32.1
+    # PEFT >= 0.16 imports HybridCache, which was added in Transformers 4.42.
+    # Keep this aligned with the ComfyUI wrapper environment (4.42.3).
+    - diffusers>=0.29.0
+    - transformers>=4.42.3,<5
     - decord==0.6.0
     - einops
     - omegaconf

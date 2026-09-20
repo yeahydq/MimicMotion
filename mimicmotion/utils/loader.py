@@ -62,4 +62,3 @@ def create_pipeline(infer_config, device):
         pose_net=mimicmotion_models.pose_net
     )
     return pipeline
-
